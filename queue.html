@@ -1,0 +1,26 @@
+<div ng-controller="QueueCtrl">
+    <md-card ng-show="usingQueue == false">
+        <md-card-content>
+            <h2 class="md-title">Welcome</h2>
+            <p>
+                From here you can influence the music that is about to be played.  You will be presented with a list of songs that are going to be played from soonest to latest.  Choosing thumbs up makes the song more likely to be played while choosing thumbs down makes it less likely to be played
+            </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="center">
+            <md-button ng-click="proceedToQueue()">Proceed</md-button>
+        </md-card-actions>
+    </md-card>
+    <md-card ng-show="usingQueue == true">
+        <img src="http://lorempixel.com/25/25/">
+        <md-card-content>
+            <h2 class="md-title">{{selected}}</h2>
+            <p>
+                Some details here
+            </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="center">
+            <md-button ng-click="likeIt()"><img src="./img/up.jpg"></md-button>
+            <md-button ng-click="hateIt()"><img src="./img/down.jpg"></md-button>
+        </md-card-actions>
+    </md-card>
+</div>

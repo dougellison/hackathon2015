@@ -29,20 +29,19 @@
             <!--<md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg">-->
             <!--</md-icon>-->
         <!--</md-button>-->
-        <h1>Angular Material: &nbsp; Starter CodePen </h1>
+        <h1>Welcome To You Choose the music</h1>
     </div>
 </md-toolbar>
-<div class="demo-swipe" md-swipe-left="onSwipeLeft()">
-    <span class="no-select"> Swipe me to the left</span>
+<div ng-hide="viewURL != ''">
+    <md-button ng-click="viewURL = 'queue.html'" >Queue</md-button>
+    <md-button ng-click="viewURL = 'search.html'">Search</md-button>
 </div>
-<br>
-<md-divider></md-divider>
-<div class="demo-swipe" md-swipe-right="onSwipeRight()">
-    <span class="no-select"> Swipe me to the right</span>
-</div>
+<div ng-include="viewURL"></div>
 
+</div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-aria.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.js"></script>
